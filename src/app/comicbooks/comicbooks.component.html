@@ -1,0 +1,8 @@
+<h2>Collection</h2>
+<ul class="comicbooks">
+  <li *ngFor="let comicbook of comicbooks" [class.selected]="comicbook === selectedComicbook" (click)="onSelect(comicbook)">
+    <span class="badge">{{ comicbook.id }}</span> {{ comicbook.title }}
+  </li>
+</ul>
+
+<app-comicbook-details [comicbook]="selectedComicbook"></app-comicbook-details>
